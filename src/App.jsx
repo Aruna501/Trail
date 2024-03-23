@@ -10,16 +10,17 @@ import Employee from './component/daysix/Employee'
 import Task1 from './component/daysix/Task1'
 import Vote from './component/daysix/Vote'
 import Welcome from './component/daysix/Welcome'
+import Assignment from './component/Dayseven/Assignment'
 
 
 class App extends Component {
 
-  state={
-    title: "Sandwich, IceCream, Milkshake ",
-    name: "Aruna",
-    salary: 20000,
+  // state={
+  //   title: "Sandwich, IceCream, Milkshake ",
+  //   name: "Aruna",
+  //   salary: 20000,
     
-        }
+  //       }
 
        
   render(){
@@ -45,6 +46,7 @@ class App extends Component {
       <Vote name="Python" /> */}
       {/* <Welcome /> */}
       {/********************************************* * Day7****************************** */}
+      <Assignment />
 
     </div>
   )
