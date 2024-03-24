@@ -78,7 +78,7 @@ export class Assignment extends Component {
                 <option value="reactjs">React Js</option>
                 <option value="reactnative">React Native</option>
                 <option value="python">Python</option>
-                <option value="dotnet">Dot net</option>
+                <option value="dotnet">Dotnet</option>
               </select>
               </div>
               <div className="col-5">

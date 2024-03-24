@@ -11,6 +11,7 @@ import Task1 from './component/daysix/Task1'
 import Vote from './component/daysix/Vote'
 import Welcome from './component/daysix/Welcome'
 import Assignment from './component/Dayseven/Assignment'
+import Travellingform from './component/Dayseven/Travellingform'
 
 
 class App extends Component {
@@ -46,7 +47,8 @@ class App extends Component {
       <Vote name="Python" /> */}
       {/* <Welcome /> */}
       {/********************************************* * Day7****************************** */}
-      <Assignment />
+      {/* <Assignment /> */}
+      <Travellingform />
 
     </div>
   )

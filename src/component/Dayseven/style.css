@@ -13,7 +13,7 @@
 }
 
 .main-container select,
-input {
+.terms-checkbox input {
     width: 100%;
 }
 
@@ -29,4 +29,48 @@ input {
 .register-btn .btn-primary {
     margin-right: 10px;
     ;
+}
+
+
+/* ********************************************* */
+
+.travel-banner {
+    width: 30%;
+    border: 1px solid black;
+    padding: 30px;
+    margin: auto;
+}
+
+.tour-design {
+    margin-bottom: 20px;
+}
+
+.field-name,
+.field-age,
+.field-gender,
+.field-source,
+.field-destination {
+    display: flex;
+    column-gap: 15px;
+    margin-bottom: 10px;
+    align-content: flex-start;
+    padding: 0px;
+}
+
+.terms-checkbox1 {
+    display: flex;
+    margin-bottom: 10px;
+    padding: 0px;
+    gap: 5px;
+}
+
+.btn-submit {
+    cursor: pointer;
+    display: flex;
+    width: auto;
+}
+
+.tour-label {
+    width: 200px;
+    text-align: start;
 }
