@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './style.css'
+import './style.scss'
 
 export class Assignment extends Component {
   state = {
@@ -17,10 +17,12 @@ export class Assignment extends Component {
   handleChange = (e) => {
     if (e.target.type === "checkbox") {
       this.setState({ [e.target.name]: e.target.checked });
-    } else {
+    }
+    else {
       this.setState({ [e.target.name]: e.target.value });
     }
   };
+
 
   handleRegister = () => {
     if (
@@ -28,21 +30,33 @@ export class Assignment extends Component {
       !this.state.fname ||
       !this.state.lname ||
       !this.state.date ||
-      !this.state.email
+      !this.state.email ||
+      !this.state.password || !this.state.confirmpassword
     ) {
       alert("Please fill in all fields");
+                }
+      else if (!this.validateEmail(this.state.email))
+      {
+        alert("Please enter a valid email address");
     }
 
-    if (!this.state.password || !this.state.confirmpassword) {
-      alert("Please fill in both password fields");
-      return;
-    }
-
-    if (this.state.password === this.state.confirmpassword) {
-      this.setState({ onRegister: true });
-    } else {
+    else if (this.state.password.length < 8) {
+              alert("Password must be at least 8 characters long");
+                    }
+    else if (this.state.password !== this.state.confirmpassword) {
       alert("Password should match");
+          }
+    else if (!this.state.checkbox) {
+            alert("Please accept Terms & Conditions");
+          }
+          else{
+      this.setState({ onRegister: true });
     }
+  };
+
+  validateEmail = (email) => {
+        const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    return isValidEmail;
   };
 
   handleReset = () => {
@@ -61,6 +75,7 @@ export class Assignment extends Component {
 
   render() {
     return (
+      <div className="ex-cls1">
       <div className="container">
         <h2>Assignment</h2>
 
@@ -72,14 +87,11 @@ export class Assignment extends Component {
                 name="title"
                 value={this.state.title}
                 onChange={this.handleChange}
-                required
-              >
-                <option value="Select your assignment"></option>
-                <option value="reactjs">React Js</option>
-                <option value="reactnative">React Native</option>
-                <option value="python">Python</option>
-                <option value="dotnet">Dotnet</option>
-              </select>
+                required >
+                  <option value=""></option>
+                  <option value="reactjs">Mr.</option>
+                <option value="reactnative">Mrs.</option>
+                              </select>
               </div>
               <div className="col-5">
               <label>First Name</label>
@@ -101,6 +113,7 @@ export class Assignment extends Component {
                 required
               />
             </div>
+            <div className="assgn-col">
             <div className="col-6">
               <label>Date of Birth</label>
               <input
@@ -121,6 +134,8 @@ export class Assignment extends Component {
                 required
               />
             </div>
+            </div>
+            <div className="assgn-col">
             <div className="col-6">
               <label>Password</label>
               <input
@@ -141,6 +156,7 @@ export class Assignment extends Component {
                 required
               />
             </div>
+            </div>
             <div  className="col-12">
               <div className="terms-checkbox">
               <input
@@ -157,7 +173,7 @@ export class Assignment extends Component {
             <button onClick={this.handleRegister} className="btn btn-primary">
               Register
             </button>
-            <button className="btn btn-secondary">Reset</button>
+            <button  onClick={this.handleReset} className="btn btn-secondary">Reset</button>
             </div>
           </div>
         )}
@@ -183,6 +199,7 @@ export class Assignment extends Component {
             </div>
           )}
         </div>
+      </div>
       </div>
     );
   }

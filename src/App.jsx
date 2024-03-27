@@ -47,8 +47,8 @@ class App extends Component {
       <Vote name="Python" /> */}
       {/* <Welcome /> */}
       {/********************************************* * Day7****************************** */}
-      {/* <Assignment /> */}
-      <Travellingform />
+      <Assignment />
+      {/* <Travellingform /> */}
 
     </div>
   )
