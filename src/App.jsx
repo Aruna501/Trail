@@ -13,6 +13,7 @@ import Welcome from './component/daysix/Welcome'
 import Assignment from './component/Dayseven/Assignment'
 import Travellingform from './component/Dayseven/Travellingform'
 import Login from './component/Day8/Login'
+import Counter from './component/Day9/Counter'
 
 
 class App extends Component {
@@ -51,8 +52,9 @@ class App extends Component {
       {/* <Assignment /> */}
       {/* <Travellingform /> */}
       {/********************************************* * Day8****************************** */}
-      <Login />
-
+      {/* <Login /> */}
+{/********************************************* * Day8****************************** */}
+<Counter />
     </div>
   )
 }
