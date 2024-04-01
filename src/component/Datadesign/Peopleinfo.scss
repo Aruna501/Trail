@@ -1,0 +1,51 @@
+.ex5 {
+    .bck {
+        background: pink;
+        width: 100%;
+        padding: 10px;
+    }
+    .main-card {
+        background: white;
+        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        color: black;
+        width: 40%;
+        margin: 10px auto;
+    }
+    .data-card {
+        display: flex;
+        flex-direction: row;
+        column-gap: 15px;
+        text-align: left;
+        padding: 10px;
+        // background: white;
+    }
+    img {
+        vertical-align: middle;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+    .cus-info {
+        text-align: left;
+        align-content: center;
+    }
+    button,
+    select {
+        text-transform: none;
+        border: none;
+        background: pink;
+        padding: 10px;
+        color: white;
+    }
+    p.age-card {
+        color: gray;
+    }
+    h4,
+    .h4 {
+        font-size: 1.2rem;
+    }
+}
