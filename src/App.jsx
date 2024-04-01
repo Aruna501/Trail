@@ -16,6 +16,7 @@ import Login from './component/Day8/Login'
 import Counter from './component/Day9/Counter'
 import Imgsrch from './component/Imagesearch/Imgsrch'
 import Peopleinfo from './component/Datadesign/Peopleinfo'
+import Tour from './component/Tours/Tour'
 
 
 class App extends Component {
@@ -59,8 +60,8 @@ class App extends Component {
 {/* <Counter /> */}
 {/********************************************* * Imagesearch ****************************** */}
 {/* <Imgsrch /> */}
-<Peopleinfo />
-
+{/* <Peopleinfo /> */}
+<Tour />
     </div>
   )
 }
