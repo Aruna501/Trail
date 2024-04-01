@@ -2,7 +2,8 @@
     .bck {
         background: pink;
         width: 100%;
-        padding: 10px;
+        height: 100%;
+        padding: 20% 10px;
     }
     .main-card {
         background: white;
@@ -12,6 +13,7 @@
         padding: 10px;
         color: black;
         width: 40%;
+        // height: auto;
         margin: 10px auto;
     }
     .data-card {

@@ -45,8 +45,7 @@ const [datainfo,setDatainfo] = useState(
 )
 
   return (
-      <div className='container'>
-    <div className='ex5'>
+          <div className='ex5'>
     <div className='bck'>
     <div className='main-card'>
         
@@ -68,8 +67,7 @@ const [datainfo,setDatainfo] = useState(
 </div>
 </div>
     </div>
-    </div>
-  )
+      )
 }
 
 export default Peopleinfo
