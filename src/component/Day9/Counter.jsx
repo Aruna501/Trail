@@ -11,10 +11,12 @@ function Counter() {
 
     const handleIncreament = () => {
       setValue(value + count)
+      setCount("");
     }
 
     const handleDecreament = () => {
       setValue(value - count)
+      setCount("");
     }
 
   return (
