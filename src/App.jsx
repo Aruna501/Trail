@@ -14,6 +14,8 @@ import Assignment from './component/Dayseven/Assignment'
 import Travellingform from './component/Dayseven/Travellingform'
 import Login from './component/Day8/Login'
 import Counter from './component/Day9/Counter'
+import Imgsrch from './component/Imagesearch/Imgsrch'
+import Peopleinfo from './component/Datadesign/Peopleinfo'
 
 
 class App extends Component {
@@ -54,7 +56,11 @@ class App extends Component {
       {/********************************************* * Day8****************************** */}
       {/* <Login /> */}
 {/********************************************* * Day8****************************** */}
-<Counter />
+{/* <Counter /> */}
+{/********************************************* * Imagesearch ****************************** */}
+{/* <Imgsrch /> */}
+<Peopleinfo />
+
     </div>
   )
 }
