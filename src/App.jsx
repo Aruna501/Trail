@@ -17,6 +17,7 @@ import Counter from './component/Day9/Counter'
 import Imgsrch from './component/Imagesearch/Imgsrch'
 import Peopleinfo from './component/Datadesign/Peopleinfo'
 import Tour from './component/Tours/Tour'
+import Accordian from './component/Accordian/Accordian'
 
 
 class App extends Component {
@@ -61,7 +62,8 @@ class App extends Component {
 {/********************************************* * Imagesearch ****************************** */}
 {/* <Imgsrch /> */}
 {/* <Peopleinfo /> */}
-<Tour />
+{/* <Tour /> */}
+<Accordian />
     </div>
   )
 }
