@@ -18,6 +18,7 @@ import Imgsrch from './component/Imagesearch/Imgsrch'
 import Peopleinfo from './component/Datadesign/Peopleinfo'
 import Tour from './component/Tours/Tour'
 import Accordian from './component/Accordian/Accordian'
+import Menu from './component/Menu/Menu'
 
 
 class App extends Component {
@@ -63,7 +64,8 @@ class App extends Component {
 {/* <Imgsrch /> */}
 {/* <Peopleinfo /> */}
 {/* <Tour /> */}
-<Accordian />
+{/* <Accordian /> */}
+<Menu />
     </div>
   )
 }
