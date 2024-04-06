@@ -1,47 +1,35 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route} from 'react-router-dom'
 
-import Home from './Home';
-import About from './About';
-import Profile from './Profile';
-import Contact from './Contact';
-import Projects from './Projects';
-import Navbar from './Navbar';
-import ErrorPage from './ErrorPage';
-import Welcomemessage from './Welcomemessage';
+import Home from './Home'
+import Team from './Team'
+import Projects from './Projects'
+import Calender from './Calender'
+import Documents from './Documents'
+import Sidebar from './Sidebar'
+import Layout from './Layout';
+import './Sidebar.css'
+
 
 
 
 function App() {
-
+  
   return (
-
-    <div className="nav-main-page">
+    <div className='sidebar-container'>
     <BrowserRouter>
-                <Navbar />
-      <Switch>
-      <Route exact path="/" render={(props) => (
-      <> <Home /> <Welcomemessage componentName="Home" /> </> )
-      } />
-        <Route path="/about" render={(props) => ( <>
-        <About /> <Welcomemessage componentName="About" /> </>
-        )} />
-        <Route path="/profile" render={(props) => ( <>
-        <Profile /> <Welcomemessage componentName="Profile" /> </>
-        )} />
-        <Route path="/contact" render={(props) => ( <>
-        <Contact /> <Welcomemessage componentName="Contact" /> </>
-        )} />
-        <Route path="/projects" render={(props) => ( <>
-        <Projects /> <Welcomemessage componentName="Projects" /> </>
-        )} />
-          <Route path='*'>
-          <ErrorPage />
-        </Route>
+    <Layout />
+    <Sidebar />
+    <Switch>
+    <Route exact path="/" component={Home} />
+    <Route path="/team" component={Team} />
+    <Route path="/calender" component={Calender} />
+    <Route path="/projects" component={Projects} />
+    <Route path="/documents" component={Documents} />
 
-      </Switch>
-          </BrowserRouter>
-          </div>
+    </Switch>
+    </BrowserRouter>
+    </div>
   )
 }
 
