@@ -6,9 +6,9 @@ import Axios from './Axios'
 function App() {
   return (
     <div>
-      <Tour />
+      {/* <Tour /> */}
       {/* <Async /> */}
-      {/* <Axios /> */}
+      <Axios />
     </div>
   )
 }

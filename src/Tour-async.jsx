@@ -7,21 +7,21 @@ function Async() {
 const [showmore, setShowmore] = useState(false);
 const [tour, setTour] = useState([ ])
 
-const fetchData = async () => {
-    try {
-        const response = await fetch('https://course-api.com/react-tours-project');
-        const data = await response.json();
-        setTour(data);
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
-};
-
-// const fetchData = () => {
-//     fetch('https://course-api.com/react-tours-project')
-//     .then(response => response.json())
-//     .then(data => setTour(data))
+// const fetchData = async () => {
+//     try {
+//         const response = await fetch('https://course-api.com/react-tours-project');
+//         const data = await response.json();
+//         setTour(data);
+//     } catch (error) {
+//         console.error('Error fetching data:', error);
+//     }
 // };
+
+const fetchData = () => {
+    fetch('https://course-api.com/react-tours-project')
+    .then(response => response.json())
+    .then(data => setTour(data))
+};
 
 
 useEffect(() => {
