@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from './Navbar'
+import Crudapplication from './Crudapplication'
 
 function App() {
   return (
     <div>
-      <Navbar />
+      <Crudapplication />
     </div>
   )
 }
