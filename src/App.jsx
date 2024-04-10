@@ -1,10 +1,10 @@
 import React from 'react'
-import Crudapplication from './Crudapplication'
+import Login from './Login'
 
 function App() {
   return (
     <div>
-      <Crudapplication />
+      <Login />
     </div>
   )
 }
