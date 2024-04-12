@@ -1,10 +1,10 @@
 import React from 'react'
-import Login from './Login'
+import Lstorage from './Lstorage'
 
 function App() {
   return (
     <div>
-      <Login />
+      <Lstorage />
     </div>
   )
 }
