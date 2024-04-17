@@ -1,78 +1,45 @@
 import React, { useState } from 'react'
-import questions from './Data';
-import Output from './Output';
-import QstandAns from './QstandAns';
-// import './tailwind.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Budgetpage from './Budgetpage';
 
-function Dashboard({setIsAuthenticated}) {
 
-    const [data, setData] = useState(questions);
-    const [currentQuestion, setCurrentQuestion] = useState(0)
-  const [showScore, setShowScore] = useState(false)
-  const [score, setScore] = useState(0)
-  const [selectedAnswer, setSelectedAnswer]=useState(false)
-  
+function Dashboard() {
 
-  
-  const handleClick = (selectedAnswerpara) =>{
-      let newData = [...data];
-      newData[currentQuestion].optionSelected=selectedAnswerpara;
-      setData(newData);
-      if(selectedAnswerpara.isCorrect===true){
-          setScore(score+1)
-                  }
-        setSelectedAnswer(true);
-              };
+  const [budget, setBudget] = useState();
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleNextqstn = () => {
-    const nextQuetions = currentQuestion + 1;
-
-    if(nextQuetions < data.length){
-        setCurrentQuestion(nextQuetions);
-        setSelectedAnswer(false);
-    }
-    else{
-        setShowScore(true);
-    }
-  }
-
-  const indexToAlphabet = (index) => {
-    return String.fromCharCode(65 + index);
+  const handleBudgetSubmit = () => {
+    setSubmitted(true);
   };
 
-  const handlePlayAgain = () => {
-    
-    setShowScore(false); 
-    setSelectedAnswer(false);
-    setScore(0); 
-    setCurrentQuestion(0);
+  const handleBudgetChange = (e) => {
+        setBudget(parseFloat(e.target.value));
   };
 
   return (
+    <div className='container'>
+      <div className="card flex-row">
+  <img className="card-img-left" src="./react-budget-app.jpeg" alt="Card image cap" />
+  <div className="card-body">
+    <h4>My Budget Planner</h4>
     <div>
-        {showScore ? (
-          <Output score={score}
-          questions={questions} 
-          data={data}
-                    handleClick={handleClick}
-                    selectedAnswer={selectedAnswer}
-          setSelectedAnswer={setSelectedAnswer}
-                    setIsAuthenticated={setIsAuthenticated}
-          handlePlayAgain={handlePlayAgain}
-                                        />
-        )
-          :(
+                      <div>
+              {submitted ? ( <Budgetpage budget={budget} /> ) :
+            (
               <div>
-        <QstandAns 
-        currentQuestion={currentQuestion}
-        data={data} 
-        handleClick={handleClick} 
-        selectedAnswer={selectedAnswer} 
-        indexToAlphabet={indexToAlphabet} 
-        handleNextqstn={handleNextqstn} />
+                <input type="number" placeholder='Enter your Budget' name={budget} value={budget} onChange={handleBudgetChange}/>
+                <button onClick={handleBudgetSubmit}>Enter</button>
             </div>
-            )
-}
+            )}
+            </div>
+          
+          </div>
+
+  </div>
+</div>
+
+
+
     </div>
   )
 }
